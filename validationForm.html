@@ -1,65 +1,163 @@
+<html>
+<script>
+function valid(){
+var a = document.f.t1.value;
+var b = document.f.t2.value;
+var atposition=a.indexOf("@");  
+ 
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body>
+var dotposition=a.lastIndexOf(".");  
+
+
+if (atposition<1 || dotposition<atposition+2 || dotposition+1>=a.length){
+
+alert("Please enter a valid e-mail address");
+
+return false;
+}
+if(b.length==0){
+alert("Enter password");
+}
+}
+</script>
+<body>
+<center><h2>Login</h2></center>
+<form name="f" action="#" onsubmit="return valid()" method="post">
+Email Id:<input type="text" name="t1"/><br><br>
+Password:<input type="password" name="t2"/><br><br>
+<input type="submit" value="Login"/>
+</form>
+</body>
+</html>
+-------------------------------------------------------------------------
+Registration Form..
+
+<html>
 
 
 
+<script>
+
+
+function validate()
+{
+
+
+var fname = document.f.t1.value;
+
+
+var lname = document.f.t2.value;
+var email = document.f.t3.value;
+ 
+
+var pword = document.f.t4.value;
+var phnumber = document.f.t5.value;
+if (fname.length==0){
+
+alert("First Name can't be blank");
+
+return false;
+
+}
+
+if (lname.length==0){
+
+alert("Last Name can't be blank");
+
+return false;
+
+}  
+var atposition=email.indexOf("@");  
+ 
+
+var dotposition=email.lastIndexOf(".");  
+
+
+if (atposition<1 || dotposition<atposition+2 || dotposition+1>=email.length){
+
+alert("Please enter a valid e-mail address");
+ 
+
+
+return false;
+   
+
+}  
+
+if(pword==null || pword.length<6){  
+ 
+
+alert("Password must be at least 6 characters long.");  
+
+
+return false;  
+   
+
+}  
+   
+
+if(phnumber.length==0 || phnumber.length<10 || phnumber.length>10)
+{  
+   
+
+alert("Phonenumber should contain 10 digits only.");  
+   
+
+return false;  
+   
+
+}  
+   
+
+
+}
+
+</script>
 
 
 
-
-
-
-<div>
+<body>
 
 <center>
 
-<h1>Registration Form</h1>
+<h2>
+REGISTRATION
+</h2>
 
-<img src="http://logo.png" height="100px" width="100px">
+</center>
 
-<form target="_blank" onsubmit="try {return window.confirm(&quot;This form may not function properly due to certain security constraints.\nContinue?&quot;);} catch (e) {return false;}">
+</body>
 
-FirstName: <input type="text" name="fname">
 
-LastName: <input type="text" name="lname">
+<form name = "f" action="#" onsubmit = "return validate();" method = "post">
 
-email Id: <input type="email" name="emailId">
 
-Password: <input type="password" name="password">
+First Name:
+<input type="text" name = "t1"/>
+<br><br>
 
-MobileNo: <input type="text" name="mobile"> 
-Branch:<select name="branch">
+Last Name:
+<input type="text" name = "t2"/>
+<br><br>
 
-<option value="CSE">CSE</option>
+Email Id:
+<input type="text" name = "t3"/><br><br>
+Password:
+<input type="password" name = "t4"/>
+<br><br>
 
-<option value="ECE">ECE</option>
 
-<option value="EEE">EEE</option>
+Phonenumber:
+<input type="text" name = "t5"/>
+<br><br>
 
-<option value="IT">IT</option>
+<input type="submit" value="Register">
 
-</select>
-
-Year:<select name="year">
-
-<option value="1">1</option>
-
-<option value="2">2</option>
-
-<option value="2">2</option>
-
-<option value="2">2</option>
-
-</select><br><br>
-
-<input type="submit" value="Submit">
-
-<input type="reset" value="Reset">
 
 </form>
 
-</center>
-</div>
+
+</body>
 
 
-</body></html>
+</html>
